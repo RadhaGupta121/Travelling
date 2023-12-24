@@ -127,9 +127,7 @@ const[newactivity,setNewactivity]=useState('');
    
     </div>
     <hr/>
-    <div style={{marginTop:"5rem",padding:"12px",backgroundColor:"rgb(23,24,53,0.8)"}}>
-    <ShowMap/>
-    </div>
+   
     <hr/>
    <div style={{marginTop:"5rem",padding:"12px",backgroundColor:"rgb(23,24,53,0.8)"}}>
 
