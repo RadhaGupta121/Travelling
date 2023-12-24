@@ -1,0 +1,25 @@
+.embark{
+    /* style={{color:"orange", fontWeight:"700"}} */
+    color:orange;
+    font-weight: 700;
+}
+.embark:hover{
+    color:red;
+
+}
+.ready{
+    color: yellow;
+}
+.ready:hover{
+    color:purple;
+}
+
+.planning{
+    /* style={{color:"rgb(201, 14, 48)",fontFamily:"cursive",fontWeight:"800"}} */
+    color: rgb(190, 9, 43);
+    font-family: cursive;
+    font-weight: 800;
+}
+.planning:hover{
+    color: yellow;
+}

@@ -1,0 +1,20 @@
+.background-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-image 0.5s ease-in-out;
+  }
+  
+  .background-container.scrolled {
+    background-attachment: fixed;
+    background-image: url('../../img/img2.jpg');
+    background-size: cover;
+  }
+  
+  /* Initial background style */
+  .background-container {
+    background-image: url('../../img/connect.jpg');
+    background-size: cover;
+  }
+  

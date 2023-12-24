@@ -1,0 +1,16 @@
+.connection-btn:hover{
+background-color: black;
+color: white;
+}
+.connection-btn{
+    background-color: transparent;
+    border-color: black;
+    color: black;
+}
+.createTrip{
+    background-color: black;
+    color: white;
+}
+.createTrip:hover{
+    background-color: rgb(16, 30, 192);
+}
