@@ -25,7 +25,19 @@ function MyCard(props) {
   const[detail,setDetail]=useState(prevTitle)
   let [prevUserId,setPrevUserId]=useState(userData.value.email);
  let [prevLocation,setPrevLocation]=useState(userData.value.address.city+" ,"+userData.value.address.state);
-
+const fileref=useRef();
+  
+ const[resultantImage,setResultantImg]=useState(img1);
+ const handleImgUpload=async()=>{
+ console.log(fileref.current.value);
+ const formInput=fileref.current;
+ const formData=new FormData();
+ formData.append("file",formInput.files[0]);
+ const output=await axios.post('/upload',formData);
+ console.log(output);
+ const imgurl=output.data;
+ setResultantImg(imgurl);
+ }
   
   const Update=(id)=>{
     setEditing(!isEditing);
@@ -46,8 +58,10 @@ function handleDetailVisibility(param)
     
       <div style={{display:"flex",justifyContent:"center",backgroundColor:"lavender"}}>
       
-         <img src={img1} alt='not found' style={{width:"8rem",height:"8rem",marginTop:"3rem",marginBottom:"-3rem",borderRadius:"50%",border:"2px solid gray",padding:"4px"}}/>
-         <span onClick={handleEdit} style={{position:"absolute",top:"12px",right:"12px"}}>
+         <img src={resultantImage} alt='not found' style={{width:"8rem",height:"8rem",marginTop:"3rem",marginBottom:"-3rem",borderRadius:"50%",border:"2px solid gray",padding:"4px"}}/>
+  <input type='file' id='myfile' name='myfile' ref={fileref} />
+ <button onClick={handleImgUpload}>Upload</button>      
+  <span onClick={handleEdit} style={{position:"absolute",top:"12px",right:"12px"}}>
         {/* <FontAwesomeIcon icon={icon({name:'pencil'})}/> */}
         </span>
       </div>
