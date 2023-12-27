@@ -59,8 +59,8 @@ function handleDetailVisibility(param)
       <div style={{display:"flex",justifyContent:"center",backgroundColor:"lavender"}}>
       
          <img src={resultantImage} alt='not found' style={{width:"8rem",height:"8rem",marginTop:"3rem",marginBottom:"-3rem",borderRadius:"50%",border:"2px solid gray",padding:"4px"}}/>
-  <input type='file' id='myfile' name='myfile' ref={fileref} />
- <button onClick={handleImgUpload}>Upload</button>      
+ //  <input type='file' id='myfile' name='myfile' ref={fileref} />
+ // <button onClick={handleImgUpload}>Upload</button>      
   <span onClick={handleEdit} style={{position:"absolute",top:"12px",right:"12px"}}>
         {/* <FontAwesomeIcon icon={icon({name:'pencil'})}/> */}
         </span>
